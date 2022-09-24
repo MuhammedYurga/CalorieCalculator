@@ -1,6 +1,286 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<h1>DİYET PLANI YARDIMCISI</h1>
+<p>&nbsp;</p>
+<tb style = "border-collapse: collapse;">
+	<tr a>
+		<td>
+			<span style = "font-size:30px;">Süt, Yoğurt  ==>&nbsp;&nbsp;&nbsp;</span>
+		</td>
+		<td>
+			<button class="btn btn-primary" @onclick = "Progress.sut_1">-1</button>
+			<button class="btn btn-primary" @onclick = "Progress.sut1">+1</button>
+		</td>
+		<td>
+			<span style = "font-size:30px">&nbsp;&nbsp;@Progress.sut&nbsp;&nbsp;</span>
+		</td>
+		<td>
+			<button class="btn btn-primary" @onclick = "Progress.sut5">+0.5</button>
+			<button class="btn btn-primary" @onclick = "Progress.sut_5">-0.5</button>
+		</td>
+	</tr>
+	<tr a>
+		<td>
+			<span style = "font-size:30px;">Et, Peynir, Yumurta  ==>&nbsp;&nbsp;&nbsp;</span>
+		</td>
+		<td>
+			<button class="btn btn-primary" @onclick = "Progress.et_1">-1</button>
+			<button class="btn btn-primary" @onclick = "Progress.et1">+1</button>
+		</td>
+		<td>
+			<span style = "font-size:30px">&nbsp;&nbsp;@Progress.et&nbsp;&nbsp;</span>
+		</td>
+		<td>
+			<button class="btn btn-primary" @onclick = "Progress.et5">+0.5</button>
+			<button class="btn btn-primary" @onclick = "Progress.et_5">-0.5</button>
+		</td>
+	</tr>
 
-Welcome to your new app.
+	<tr a>
+		<td>
+			<span style = "font-size:30px;">Ekmek, Tahıl  ==>&nbsp;&nbsp;&nbsp;</span>
+		</td>
+		<td>
+			<button class="btn btn-primary" @onclick = "Progress.ekmek_1">-1</button>
+			<button class="btn btn-primary" @onclick = "Progress.ekmek1">+1</button>
+		</td>
+		<td>
+			<span style = "font-size:30px">&nbsp;&nbsp;@Progress.ekmek&nbsp;&nbsp;</span>
+		</td>
+		<td>
+			<button class="btn btn-primary" @onclick = "Progress.ekmek5">+0.5</button>
+			<button class="btn btn-primary" @onclick = "Progress.ekmek_5">-0.5</button>
+		</td>
+	</tr>
+
+	<tr a>
+		<td>
+			<span style = "font-size:30px;">Meyve  ==>&nbsp;&nbsp;&nbsp;</span>
+		</td>
+		<td>
+			<button class="btn btn-primary" @onclick = "Progress.meyve_1">-1</button>
+			<button class="btn btn-primary" @onclick = "Progress.meyve1">+1</button>
+		</td>
+		<td>
+			<span style = "font-size:30px">&nbsp;&nbsp;@Progress.meyve&nbsp;&nbsp;</span>
+		</td>
+		<td>
+			<button class="btn btn-primary" @onclick = "Progress.meyve5">+0.5</button>
+			<button class="btn btn-primary" @onclick = "Progress.meyve_5">-0.5</button>
+		</td>
+	</tr>
+
+
+	<tr a>
+		<td>
+			<span style = "font-size:30px;">Sebze  ==>&nbsp;&nbsp;&nbsp;</span>
+		</td>
+		<td>
+			<button class="btn btn-primary" @onclick = "Progress.sebze_1">-1</button>
+			<button class="btn btn-primary" @onclick = "Progress.sebze1">+1</button>
+		</td>
+		<td>
+			<span style = "font-size:30px">&nbsp;&nbsp;@Progress.sebze&nbsp;&nbsp;</span>
+		</td>
+		<td>
+			<button class="btn btn-primary" @onclick = "Progress.sebze5">+0.5</button>
+			<button class="btn btn-primary" @onclick = "Progress.sebze_5">-0.5</button>
+		</td>
+	</tr>
+
+	<tr a>
+		<td>
+			<span style = "font-size:30px;">Yağ  ==>&nbsp;&nbsp;&nbsp;</span>
+		</td>
+		<td>
+			<button class="btn btn-primary" @onclick = "Progress.yag_1">-1</button>
+			<button class="btn btn-primary" @onclick = "Progress.yag1">+1</button>
+		</td>
+		<td>
+			<span style = "font-size:30px">&nbsp;&nbsp;@Progress.yag&nbsp;&nbsp;</span>
+		</td>
+		<td>
+			<button class="btn btn-primary" @onclick = "Progress.yag5">+0.5</button>
+			<button class="btn btn-primary" @onclick = "Progress.yag_5">-0.5</button>
+		</td>
+	</tr>
+</tb>
+<p>&nbsp</p>
+<style>
+table[b], td[b], th[b] {
+  border: 1px solid;
+}
+
+tr[a] {
+  border-bottom: 1pt solid black;
+}
+
+table[b] {
+  width: 100%;
+  border-collapse: collapse;
+}
+</style>
+
+<h2>SONUÇLAR</h2>
+
+<table b>
+	<tr>
+		<th b/>
+		<th b>
+			Değişim
+		</th>
+		<th b>
+			Karbonhidrat
+		</th>
+		<th b>
+			Protein
+		</th>
+		<th b>
+			Yağ
+		</th>
+	</tr>
+	<tr>
+		<td b>
+			Süt, Yoğurt
+		</td>
+		<td b>
+			@Progress.sut
+		</td>
+		<td b>
+			@(Progress.sut*9)
+		</td>
+		<td b>
+			@(Progress.sut * 6)
+		</td>
+		<td b>
+			@(Progress.sut*6)
+		</td>
+	</tr>
+	<tr>
+		<td b>
+			Et, Peynir, Yumurta
+		</td>
+		<td b>
+			@(Progress.et)
+		</td>
+		<td b>
+			
+		</td>
+		<td b>
+			@(Progress.et * 6)
+		</td>
+		<td b>
+			@(Progress.et * 5)
+		</td>
+	</tr>
+	<tr>
+		<td b>
+			Ekmek, Tahıl, Kuru Baklagil
+		</td>
+		<td b>
+			@(Progress.ekmek)
+		</td>
+		<td b>
+			@(Progress.ekmek * 15)
+		</td>
+		<td b>
+			@(Progress.ekmek * 2)
+		</td>
+		<td b>
+			
+		</td>
+	</tr>
+	<tr>
+		<td b>
+			Meyve
+		</td>
+		<td b>
+			@(Progress.meyve)
+		</td>
+		<td b>
+			@(Progress.meyve * 15)
+		</td>
+		<td b>
+			
+		</td>
+		<td b>
+			
+		</td>
+	</tr>
+	<tr>
+		<td b>
+			Sebze
+		</td>
+		<td b>
+			@(Progress.sebze)
+		</td>
+		<td b>
+			@(Progress.sebze * 6)
+		</td>
+		<td b>
+			@(Progress.sebze * 2)
+		</td>
+		<td b>
+			
+		</td>
+	</tr>
+	<tr>
+		<td b>
+			Yağ
+		</td>
+		<td b>
+			@(Progress.yag)
+		</td>
+		<td b>
+			
+		</td>
+		<td b>
+			
+		</td>
+		<td b>
+			@(Progress.yag * 5)
+		</td>
+	</tr>
+	<tr>
+		<th b>
+			TOPLAM GRAM
+		</th>
+		<th b>
+			
+		</th>
+		<th b>
+			@(Progress.carb)
+		</th>
+		<th b>
+			@(Progress.pro)
+		</th>
+		<th b>
+			@(Progress.oil)
+		</th>
+	</tr>
+
+	<tr>
+		<th b>
+			TOPLAM KALORİ
+		</th>
+		<th b>
+			@(Progress.calorie) cal
+		</th>
+		<th b>
+			@(Progress.calcarb) cal - %@(Progress.percarb)
+		</th>
+		<th b>
+			@(Progress.calpro) cal - %@(Progress.perpro)
+		</th>
+		<th b>
+			@(Progress.caloil) cal - %@(Progress.peroil)
+		</th>
+	</tr>
+</table>
+
+
+@code{
+
+}
+
 
