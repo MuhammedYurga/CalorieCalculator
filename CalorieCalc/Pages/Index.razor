@@ -1,6 +1,57 @@
 ﻿@page "/"
 
-<h1>DİYET PLANI YARDIMCISI</h1>
+<h1>DİYET PLAN YARDIMCISI</h1>
+<p>&nbsp;</p>
+<table b>
+	<tr>
+		<th/>
+		<th b>
+			Değişim
+		</th>
+		<th b>
+			Karbonhidrat
+		</th>
+		<th b>
+			Protein
+		</th>
+		<th b>
+			Yağ
+		</th>
+	</tr>
+	<tr>
+		<th b>
+			TOPLAM GRAM</th>
+		<th b>
+			
+		</th>
+		<th b>
+			@(Progress.carb)
+		</th>
+		<th b>
+			@(Progress.pro)
+		</th>
+		<th b>
+			@(Progress.oil)
+		</th>
+	</tr>
+
+	<tr>
+		<th b>
+			TOPLAM KALORİ</th>
+		<th b>
+			@(Progress.calorie) cal
+		</th>
+		<th b>
+			@(Progress.calcarb) cal - %@(Progress.percarb)
+		</th>
+		<th b>
+			@(Progress.calpro) cal - %@(Progress.perpro)
+		</th>
+		<th b>
+			@(Progress.caloil) cal - %@(Progress.peroil)
+		</th>
+	</tr>
+</table>
 <p>&nbsp;</p>
 <tb style = "border-collapse: collapse;">
 	<tr a>
@@ -106,20 +157,7 @@
 	</tr>
 </tb>
 <p>&nbsp</p>
-<style>
-table[b], td[b], th[b] {
-  border: 1px solid;
-}
 
-tr[a] {
-  border-bottom: 1pt solid black;
-}
-
-table[b] {
-  width: 100%;
-  border-collapse: collapse;
-}
-</style>
 
 <h2>SONUÇLAR</h2>
 
