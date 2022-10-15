@@ -23,7 +23,8 @@ namespace CalorieCalc
 		public static double peroil;
 		//Common
 		public static int calorie;
-		private static double caloriedb;
+		public static double caloriedb;
+		public static double caloriedbV2;
 		
 		public static void calculate()
         {
@@ -34,10 +35,23 @@ namespace CalorieCalc
 			calpro = pro * 4;
 			caloil = oil * 9;
 			caloriedb = calcarb + calpro + caloil;
+			caloriedbV2 = caloriedb;
+			if (caloriedbV2 == 0)
+				caloriedbV2 = 999999999;
 			calorie = Convert.ToInt32(Math.Round(caloriedb));
-			percarb = Math.Round(((100 * calcarb) / caloriedb),1);
-			perpro = Math.Round(((100 * calpro) / caloriedb),1);
-			peroil = Math.Round(((100 * caloil) / caloriedb),1);
+			percarb = Math.Round(((100 * calcarb) / caloriedbV2),1);
+			perpro = Math.Round(((100 * calpro) / caloriedbV2),1);
+			peroil = Math.Round(((100 * caloil) / caloriedbV2),1);
+		}
+		public static void sifirla()
+        {
+			sut = 0;
+			et = 0;
+			ekmek = 0;
+			meyve = 0;
+			sebze = 0;
+		    yag = 0;
+			calculate();
 		}
         #region +1 Buttons
         public static void sut1()
